@@ -9,7 +9,7 @@ export const flamenco = Flamenco({
 });
 
 export const metadata: Metadata = {
-  title: 'Pages app',
+  title: 'Hello',
 };
 
 export default function RootLayout({
