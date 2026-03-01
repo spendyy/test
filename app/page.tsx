@@ -109,7 +109,7 @@ export default function Home() {
   };
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 15;
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -122,7 +122,13 @@ export default function Home() {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  if (loading) return <div className="text-center py-20">Loading posts...</div>;
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
   if (error)
     return (
       <div className="text-center py-20 text-red-500">
@@ -133,7 +139,7 @@ export default function Home() {
   return (
     <div className="flex justify-center w-full min-h-screen bg-gray-100">
       {' '}
-      <main className="w-full max-w-5xl px-4 py-8">
+      <main className="w-full max-w-5xl px-4 py-2">
         <div className="flex flex-col">
           {(isAdmin && (
             <h1 className="text-3xl font-bold text-center mb-8 mt-4">

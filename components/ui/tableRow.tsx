@@ -36,8 +36,8 @@ export default function TableRow({
     >
       <td className="py-3 px-6 text-left whitespace-nowrap">{created_at}</td>
       <td className="py-3 px-6 text-left font-medium">{title}</td>
-      <td className="py-3 px-6 text-left">{slug}</td>
-      <td className="py-3 px-6 text-center">{creator}</td>
+      <td className="py-3 px-6 text-left">{'/' + slug}</td>
+      <td className="py-3 px-6 text-center font-medium">{creator}</td>
 
       {isAdmin && (
         <td className="py-3 px-6 text-center">
