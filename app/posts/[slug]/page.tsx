@@ -117,7 +117,7 @@ export default function PostPage({
           {post.html ? (
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
           ) : (
-            <p className=" whitespace-pre-wrap">{post.content}</p>
+            <p className="whitespace-pre-wrap">{post.content}</p>
           )}
         </article>
       </div>
